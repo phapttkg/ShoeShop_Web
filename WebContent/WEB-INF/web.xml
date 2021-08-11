@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" 
+	version="3.1">
+	
+  <display-name>3rdteam01</display-name>
+  <description>learn about mvc framework</description>
+
+<!-- directory/ -->
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+
+<!-- Resouce with JNDI
+	<resource-ref>
+		<res-ref-name>jdbc/mysql</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref> -->
+
+  <!--  shared data all Servlet in this application -->
+  <!-- path of config file -->
+  <context-param>
+  	<param-name>contextConfigLocation</param-name>
+  	<param-value>/WEB-INF/application-context.properties</param-value>
+  </context-param>
+	
+	<!-- ServletContext -->
+  <context-param>
+  	<param-name>uploadDir</param-name>
+  	<param-value>/uploads</param-value>
+  </context-param>
+	<!-- DB connection info -->  
+<!--   <context-param>
+  	<param-name>driver</param-name>
+  	<param-value>com.mysql.cj.jdbc.Driver</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>url</param-name>
+  	<param-value>jdbc:mysql://localhost:3306/demo?serverTimezone=UTC</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>username</param-name>
+  	<param-value>root</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>password</param-name>
+  	<param-value></param-value>
+  </context-param>
+ -->
+	<!-- Listener @WebListener -->
+<!--
+ 	<listener>
+		<listener-class>com.coeding.servlet.listener.ContextListener01</listener-class>
+	</listener>
+ -->	
+ 
+	<!-- Filter -->
+<!-- 
+	<filter>
+		<filter-name>filter01</filter-name>
+		<filter-class>com.coeding.servlet.filter.Filter01</filter-class>
+	</filter>
+	<filter>
+		<filter-name>filter02</filter-name>
+		<filter-class>com.coeding.servlet.filter.Filter02</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>filter02</filter-name>
+		<url-pattern>/filter/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>filter01</filter-name>
+		<url-pattern>/filter/*</url-pattern>
+	</filter-mapping>
+	
+ -->
+   <!-- Servlet mapping Class.forName("com.coeding.servlet.Servlet01") -->
+<!--    <servlet>
+   	<servlet-name>param01</servlet-name>
+   	<servlet-class>com.coeding.servlet.param.ServletInitParam01</servlet-class>
+   	<init-param>
+   		<param-name>version</param-name>
+   		<param-value>0.0.1-SNAPSHOT</param-value>
+   	</init-param>
+   </servlet>
+  <servlet-mapping>
+  	<servlet-name>param01</servlet-name>
+  	<url-pattern>/param01</url-pattern>
+  </servlet-mapping>
+   
+  <servlet>
+  	<servlet-name>step01</servlet-name>
+  	<servlet-class>com.coeding.servlet.Servlet01</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>step01</servlet-name>
+  	<url-pattern>/step01</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+  	<servlet-name>step02</servlet-name>
+  	<servlet-class>com.coeding.servlet.Servlet02</servlet-class>
+  	<init-param>
+  		when create instance Servlet02(param) 
+  			ServletConfig
+  		
+  		<param-name>author</param-name>
+  		<param-value>MinhViet oi</param-value>
+  	</init-param>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>step02</servlet-name>
+  	<url-pattern>/step02</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+  	<servlet-name>step03</servlet-name>
+  	<servlet-class>com.coeding.servlet.Servlet03</servlet-class>
+  	<init-param>
+  		<param-name>author</param-name>
+  		<param-value>William Jang</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>username</param-name>
+  		<param-value>William Jang</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>password</param-name>
+  		<param-value>William Jang</param-value>
+  	</init-param>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>step03</servlet-name>
+  	<url-pattern>/step03</url-pattern>
+  </servlet-mapping>
+ -->
+
+</web-app>
